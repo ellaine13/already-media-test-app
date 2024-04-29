@@ -1,6 +1,6 @@
 {
   "name": "project-front-template-html",
-  "version": "1.0.1",
+  "version": "2.0.1",
   "description": "A template for a quick start",
   "keywords": [
     "project",
@@ -96,7 +96,5 @@
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.19.0"
   },
-  "dependencies": {
-    "svg4everybody": "^2.1.9"
-  }
+  "dependencies": {}
 }
