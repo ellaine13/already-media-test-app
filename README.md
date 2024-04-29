@@ -1,5 +1,4 @@
-# Project Template Frontend
-**Шаблон проекта для быстрого старта**
+# Already Media Test Project
 
 ## Старт проекта
 
