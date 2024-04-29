@@ -1,0 +1,5 @@
+export const libsJsLink = [
+  'node_modules/svg4everybody/dist/svg4everybody.min.js',
+];
+
+export const libsCssLink = [];

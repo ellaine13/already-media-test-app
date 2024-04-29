@@ -1,0 +1,106 @@
+.additional {
+  max-height: 0;
+  margin: 0 -10px;
+  padding: 0 10px 0;
+  border-radius: 0 0 10px 10px;
+  border-top: 1px solid #ebecf5;
+  background: #f1f3fd;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease;
+
+  &.is-active {
+    max-height: 100%;
+    padding: 10px;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s ease;
+  }
+
+  @media screen and (min-width: 1024px) {
+    margin: 0 -15px;
+    padding: 0 15px 0;
+    border-radius: 0 0 15px 15px;
+    transition: none;
+
+    &.is-active {
+      padding: 15px;
+    }
+  }
+
+  &__box {
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      gap: 15px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 15px;
+
+    @media screen and (min-width: 420px) {
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+      line-height: 20px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 0;
+      font-size: 1.4rem;
+      line-height: 25px;
+    }
+  }
+
+  &__list {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ebecf5;
+
+    @media screen and (min-width: 1024px) {
+      width: 31.3%;
+      padding: 16px 15px;
+      flex-shrink: 0;
+      border-radius: 15px;
+    }
+
+    & + & {
+      margin-top: 10px;
+
+      @media screen and (min-width: 1024px) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 18px;
+
+    @media screen and (min-width: 1024px) {
+      padding-left: 28px;
+    }
+
+    & + & {
+      margin-top: 10px;
+
+      @media screen and (min-width: 1024px) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: -1px;
+    display: block;
+    font-size: 1.4rem;
+
+    @media screen and (min-width: 1024px) {
+      top: -3px;
+      font-size: 2.5rem;
+    }
+  }
+}

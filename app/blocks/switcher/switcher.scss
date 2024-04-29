@@ -1,0 +1,71 @@
+.switcher {
+  position: absolute;
+  bottom: -138px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    background-color: #a6aac3;
+    z-index: -1;
+  }
+
+  @media screen and (min-width: 420px) {
+    bottom: -82px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    position: relative;
+    bottom: 0;
+  }
+
+  &__btn {
+    position: relative;
+    min-width: 99px;
+    padding: 10px 30px 8px 12px;
+    background-color: #f7f8fd;
+    color: #a6aac3;
+    transition: 0.2s color ease;
+
+    &:active {
+      color: #686d8b;
+      transition: none;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      margin-top: -8px;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTUnIGhlaWdodD0nMTUnIHZpZXdCb3g9JzAgMCAxNSAxNScgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMTAuNTYyNSA1Ljc1QzEwLjMxMjUgNS41IDkuOTM3NSA1LjUgOS42ODc1IDUuNzVMNy41IDcuOTM3NUw1LjMxMjUgNS43NUM1LjA2MjUgNS41IDQuNjg3NSA1LjUgNC40Mzc1IDUuNzVDNC4xODc1IDYgNC4xODc1IDYuMzc1IDQuNDM3NSA2LjYyNUw3LjA2MjUgOS4yNUM3LjE4NzUgOS4zNzUgNy4zMTI1IDkuNDM3NSA3LjUgOS40Mzc1QzcuNjg3NSA5LjQzNzUgNy44MTI1IDkuMzc1IDcuOTM3NSA5LjI1TDEwLjU2MjUgNi42MjVDMTAuODEyNSA2LjM3NSAxMC44MTI1IDYgMTAuNTYyNSA1Ljc1WicgZmlsbD0nIzAwNzlGMCcvPjwvc3ZnPg==");
+    }
+
+    &.is-active {
+      &::before {
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTUnIGhlaWdodD0nMTUnIHZpZXdCb3g9JzAgMCAxNSAxNScgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMTAuNTYyNSA5LjI1QzEwLjMxMjUgOS41IDkuOTM3NSA5LjUgOS42ODc1IDkuMjVMNy41IDcuMDYyNUw1LjMxMjUgOS4yNUM1LjA2MjUgOS41IDQuNjg3NSA5LjUgNC40Mzc1IDkuMjVDNC4xODc1IDkgNC4xODc1IDguNjI1IDQuNDM3NSA4LjM3NUw3LjA2MjUgNS43NUM3LjE4NzUgNS42MjUgNy4zMTI1IDUuNTYyNSA3LjUgNS41NjI1QzcuNjg3NSA1LjU2MjUgNy44MTI1IDUuNjI1IDcuOTM3NSA1Ljc1TDEwLjU2MjUgOC4zNzVDMTAuODEyNSA4LjYyNSAxMC44MTI1IDkgMTAuNTYyNSA5LjI1WicgZmlsbD0nI0E2QUFDMycvPjwvc3ZnPg==");
+      }
+    }
+
+    .no-touchevents & {
+      &:hover {
+        color: #888dad;
+      }
+
+      &:active {
+        color: #686d8b;
+        transition: none;
+      }
+    }
+  }
+}
